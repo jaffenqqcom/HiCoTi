@@ -1,0 +1,57 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "storePassword": "0000002027B9AF6B473335FBE5C4DB22F849036D103983C8914FA9BA69BDE1A1B1FBC86D84AB969869623658A42587AC",
+          "certpath": "/storage/Users/currentUser/Documents/ohos/config/default_HiCoTizwz8e6m_AK-HilEyK4aw1T0NPpDPGFkIR1_vNcLigMQ.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000002027B9AF6B473335FBE5C4DB22F849036D103983C8914FA9BA69BDE1A1B1FBC86D84AB969869623658A42587AC",
+          "profile": "/storage/Users/currentUser/Documents/ohos/config/default_HiCoTizwz8e6m_AK-HilEyK4aw1T0NPpDPGFkIR1_vNcLigMQ.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/storage/Users/currentUser/Documents/ohos/config/default_HiCoTizwz8e6m_AK-HilEyK4aw1T0NPpDPGFkIR1_vNcLigMQ.p12"
+        },
+        "type": "HarmonyOS"
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "targetSdkVersion": "6.1.0(23)",
+        "compatibleSdkVersion": "6.1.0(23)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        },
+        "bundleName": "app.hicoti.terminal"
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug"
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

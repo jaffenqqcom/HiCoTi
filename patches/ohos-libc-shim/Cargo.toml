@@ -1,0 +1,20 @@
+[package]
+name = "ohos-libc-shim"
+version = "0.1.0"
+# Copied verbatim from HiCodeer's crates/gpui_ohos/depend/ohos-libc-shim, where
+# this was `edition.workspace = true` (its workspace declares edition = "2024").
+# Spelled out explicitly because HiCoTi's workspace root has no
+# [workspace.package] section. The 2024 edition matters: the source uses the
+# 2024-only `#[unsafe(no_mangle)]` attribute syntax.
+edition = "2024"
+license = "Apache-2.0"
+
+# The upstream [lints] workspace = true block is dropped: HiCoTi's workspace root
+# has no [workspace.lints] section. It only set `unexpected_cfgs = "allow"`, and
+# this crate contains no cfg-gated code, so nothing is lost.
+
+[lib]
+path = "src/ohos_libc_shim.rs"
+
+[dependencies]
+libc = "0.2"
